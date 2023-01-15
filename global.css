@@ -50,10 +50,31 @@ div.teste {
     margin-right: auto;
 }
 
-span {
-    display: inline;
+span.spanTeste {
+    /*
+      Display inline não é uma caixa. Width, height, margin top e bottom não funcionam nele. 
+      Por padrão ele segue a linha do conteúdo.
+      A tag span por padrão é display: inline 
+    */
+    display: inline; 
     background-color: red;
     color: white;
     width: 500px;
     height: 500px;
+}
+
+span.inlineBlock {
+    /* 
+        A grande vantagem do inline é poder deixar conteúdos/tags html na mesma linha. 
+        O inline-block permite o uso normal de witdh, height, padding e margin e ainda 
+        nos permite a função de deixar o conteúdo seguinte na mesma linha! Porém o conteúdo 
+        seguinte também necessita ser inline!
+    */
+    display: inline-block; 
+    background-color: yellow;
+    width: 500px;
+}
+
+div.divInline {
+    display: inline;
 }
